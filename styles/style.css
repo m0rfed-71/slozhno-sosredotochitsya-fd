@@ -2,4 +2,174 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-page);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #000028;
+  margin: 10px;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 23px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 20px;
+}
+
+.header__rec {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  color: var(--color-accent);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -30px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 4px 2px var(--color-accent);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-self: end;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  color: var(--сolor-header-text-dark);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 0 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--сolor-header-text-dark);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border: 1px solid var(--сolor-header-text-dark);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__title {
+  color: var(--color-title);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--color-accent);
+  align-self: center;
+  justify-self: start;
+}
+
+.content {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__divider {
+  background-color: var(--color-accent);
+  padding: 20px;
+  color: var(--color-text-dark);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.content__heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.content__subheading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.content__text-block {
+  padding: 0 20px;
+}
+
+.content__paragraph {
+  color: var(--color-text);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-bottom: 20px;
+}
+
+.content__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.content__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.content__gallery-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer {
+  height: 100vh;
+  min-height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer__title {
+  color: var(--color-title);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0 var(--color-accent);
 }
