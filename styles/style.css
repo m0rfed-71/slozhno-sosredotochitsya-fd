@@ -69,7 +69,7 @@ body {
 }
 
 .header__theme-menu-button {
-  color: var(--сolor-header-text-dark);
+  color: var(--сolor-header-text);
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -80,11 +80,10 @@ body {
   border: none;
   text-transform: lowercase;
   cursor: pointer;
-  
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--сolor-header-text-dark);
+  border: 1px solid var(--сolor-header-text);
 }
 
 .header__theme-menu-button:focus {
@@ -92,7 +91,7 @@ body {
 }
 
 .header__theme-menu-button:focus-visible {
-  border: 1px solid var(--сolor-header-text-dark);
+  border: 1px solid var(--сolor-header-text);
 }
 
 .header__theme-menu-button_active {
@@ -111,6 +110,7 @@ body {
 }
 
 .signature {
+  display: grid;
   margin-block-start: 50px;
   margin-inline-end: 10px;
 }
@@ -147,7 +147,7 @@ body {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: var(--сolor-header-text-dark);
+  color: var(--сolor-header-text);
   margin-block-start: 50px;
   margin-block-end: 20px;
 
