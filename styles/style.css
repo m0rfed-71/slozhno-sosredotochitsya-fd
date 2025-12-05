@@ -131,22 +131,10 @@ text-align: left;
   display: flex;
   flex-direction: column;
 }
-/*
-.content__divider {
-  background-color: var(--color-accent);
-  padding: 20px;
-  color: var(--color-text-dark);
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
+.content__paragraph a {
+  text-shadow:2px 2px 0 var(--color-accent);
+  text-decoration: none;
 }
-
-.content__heading {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-} */
 
 .content_heading {
   font-family: "IBM Plex Mono", sans-serif;
@@ -193,7 +181,6 @@ text-align: left;
   font-weight: 700;
   font-family: "IBM Plex Mono", sans-serif;
   line-height: 23.4px;
- /* margin-block-end: 10px; /* удалить и посмотреть что будет */
 }
 
 .content_sub-sub-heading_regular {
@@ -220,8 +207,6 @@ text-align: left;
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
- /* padding-block-start: 10px; */
- /* margin-bottom: 20px; /* удалить и посмотреть что будет */
 }
 
 .content__paragraph:last-child {
@@ -242,11 +227,12 @@ text-align: left;
 }
 
 .footer {
-  height: 100vh;
-  min-height: 667px;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
@@ -256,4 +242,64 @@ text-align: left;
   font-weight: 700;
   line-height: 82.5%;
   text-shadow: 2px 2px 0 var(--color-accent);
+}
+
+@media (width >= 768px) {
+  .signature{
+    padding-block-start: 154px;
+    margin-inline-start: auto;
+    margin-inline-end: 10px;
+    max-width: 364px;
+    justify-self: end;
+    align-self: start;
+  }
+  /*.padding-heading {
+    padding-inline-end: 512px;
+    margin-block-start: 20px;
+    padding-inline-start: 10px;
+    
+  } */
+  .padding-heading_second {
+    padding-inline-end: 512px;
+    margin-block-start: 30px;
+    padding-inline-start: 10px;
+  }
+ /*непонятно как реализовать правильно, но похоже на то, что нужно*/
+ .content__concentration-hard {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: 1fr;
+    gap: 17px;
+    padding-block-start: 20px;
+    padding-inline-start: 10px;
+  }
+
+  .content__left-column  {
+  grid-column: 1/2;
+  }
+  .content__right-column {
+    grid-column: 2/2;
+    grid-row: 1/2;
+    padding-block-start: 10px;
+  }
+
+  .padding_sub-sub-heading {
+    padding-block-start: 20px;
+    padding-inline-start: 10px;
+  }
+  .content__concentration-low-attention {
+    display: grid;
+   
+  }
+  .content__concentration-low-attention .content__text-block {
+    padding-inline-start: 10px; /*надо бы бы исправить, тк все равно верстка едет */
+  }
+  .content__concentration-better-focus { 
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: 1fr;
+    gap: 17px;
+    padding-block-start: 20px;
+    padding-inline-start: 10px;
+  } /*РЕАЛИЗОВАТЬ ПРАВИЛЬНОЕ расположение блоков*/
 }
