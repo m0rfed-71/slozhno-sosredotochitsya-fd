@@ -13,55 +13,70 @@
 
 .header {
   position: relative;
+  flex-direction: column;
   height: 100vh;
   min-height: 23px;
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
 }
 
 .header__rec {
-  position: absolute;
-  
-  right: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+  margin-inline-start: 294px;
+  margin-inline-end: 29px;
   color: var(--color-accent);
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   text-transform: uppercase;
-  
 }
 
 .header__rec::after {
   content: "";
-  position: absolute;
-  top: 8px;
-  right: -15px;
+  display: inline-block;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background-color: var(--color-accent);
   box-shadow: 0 0 4px 2px var(--color-accent);
+  flex-shrink: 0;
 }
 
-.decorated-zone::before,
-.decorated-zone::after {
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
+  right: 20px;
   width: 25px;
   height: 25px;
-  right: 20px;
   border-top: 1px solid var(--color-accent);
   border-right: 1px solid var(--color-accent);
 }
 
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+}
+
 .header__theme-menu {
-  margin-block-start: 65px;
+  
+  margin-block-start: 40px;
   margin-inline-end: 25px;
 }
 
 .header__theme-menu-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-self: end;
   gap: 16px;
 }
@@ -99,18 +114,17 @@
 .header__title {
   color: var(--color-title);
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.8125rem + 6.25vw, 9.8125rem);;
   font-weight: 700;
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--color-accent);
-  align-self: start;
-  justify-self: start;
+  margin-block-start: 70px;
 }
 
 .signature {
-  padding-right: 10px;
-padding-block-start: 48px;
-text-align: left;
+  padding-inline-end: 20px;
+ padding-block-start: 56px;
+ text-align: left;
 }
 
 .signature-heading {
@@ -131,6 +145,7 @@ text-align: left;
   display: flex;
   flex-direction: column;
 }
+
 .content__paragraph a {
   text-shadow:2px 2px 0 var(--color-accent);
   text-decoration: none;
@@ -149,6 +164,11 @@ text-align: left;
 }
 
 .padding-heading_second {
+  padding-inline-end: 20px;
+  padding-block-start: 50px;
+}
+
+.padding-heading_third {
   padding-inline-end: 20px;
   padding-block-start: 50px;
 }
@@ -198,8 +218,6 @@ text-align: left;
   padding-inline-end: 20px;
 }
 
-
-
 .content__paragraph {
   color: var(--color-text);
   font-family: "IBM Plex Mono", sans-serif;
@@ -244,62 +262,234 @@ text-align: left;
   text-shadow: 2px 2px 0 var(--color-accent);
 }
 
+
 @media (width >= 768px) {
+  .header__rec {
+    margin-block-start: 10px;
+    margin-inline-start: 677px;
+  }
+
+  .decorated-zone::before {
+    right: 10px;
+    top: 10px;
+  }
+
+  .decorated-zone::after {
+    bottom: 30px;
+    left: 10px;
+  }
+
+.header__title {
+  margin-block-start: 185px;
+
+}
+
+  .header__theme-menu {
+    padding-block-start: 109px;
+    margin-inline-end: 18px;
+  }
+
   .signature{
     padding-block-start: 154px;
-    margin-inline-start: auto;
-    margin-inline-end: 10px;
-    max-width: 364px;
+    margin-inline-start: 374px;
     justify-self: end;
     align-self: start;
   }
-  /*.padding-heading {
-    padding-inline-end: 512px;
-    margin-block-start: 20px;
-    padding-inline-start: 10px;
-    
-  } */
-  .padding-heading_second {
-    padding-inline-end: 512px;
-    margin-block-start: 30px;
-    padding-inline-start: 10px;
-  }
- /*непонятно как реализовать правильно, но похоже на то, что нужно*/
+
  .content__concentration-hard {
     display: grid;
     grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
     gap: 17px;
     padding-block-start: 20px;
-    padding-inline-start: 10px;
+    padding-block-end: 30px;
   }
 
   .content__left-column  {
   grid-column: 1/2;
   }
+
   .content__right-column {
     grid-column: 2/2;
     grid-row: 1/2;
     padding-block-start: 10px;
+    padding-inline-start: 10px;
   }
+ 
+  .padding-heading {  
+    padding-inline-start: 10px;
+    
+  } 
 
   .padding_sub-sub-heading {
     padding-block-start: 20px;
-    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    padding-inline-start: 4px;
   }
+
   .content__concentration-low-attention {
     display: grid;
-   
+    padding-block-end: 10px;
   }
+
+  .padding-heading_second {
+    padding-inline-end: 512px;
+    padding-inline-start: 10px;
+  }
+
+  .content__concentration-low-attention .padding_sub-sub-heading {
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+  }
+
   .content__concentration-low-attention .content__text-block {
-    padding-inline-start: 10px; /*надо бы бы исправить, тк все равно верстка едет */
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
   }
+  
   .content__concentration-better-focus { 
     display: grid;
     grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
     gap: 17px;
     padding-block-start: 20px;
+  }
+
+  .content__left-column_better-focus {
+    grid-column: 1/2;
+  }
+
+  .padding-heading_third {
+    padding-inline-start: 9px;
+    padding-inline-end: 0px;
+    padding-block-start: 48px;
+  }
+ 
+
+  .content__right-column_better-focus {
+    grid-column: 2/2;
+    grid-row: 1/2;
+    padding-block-start: 30px;
+    
+  }
+
+  .content__concentration-better-focus .content__text-block {
+    padding-inline-start: 13px;
+    padding-inline-end: 10px;
+  }
+
+  .padding_sub-sub-heading_second {
+    padding-inline-start: 14px;
+    padding-inline-end: 10px;
+  }
+
+  .content__concentration-better-focus .padding_sub-sub-heading {
+    padding-inline-start: 13px;
+    padding-inline-end: 10px;
+  }
+
+  .gallery {
     padding-inline-start: 10px;
-  } /*РЕАЛИЗОВАТЬ ПРАВИЛЬНОЕ расположение блоков*/
+    padding-block-start: 30px;
+    padding-inline-end: 10px;
+    gap: 20px;
+  }
+
+  .padding_gallery {
+    padding-inline-end: 0px;
+  }
+  
+  .content__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline-end: 0px;
+  }
+
+  .content__gallery-image:first-child {
+    grid-column: span 2;
+  }
+
+  .content__gallery-image:nth-child(2) {
+    grid-row: span 3;
+    height: 100%;
+  }
+
+  .content__gallery-image:nth-child(3) {
+    grid-row: 2/5;
+    height: 100%;
+  }
+
+  .content__gallery-image:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+  
+.footer {
+  margin-block-start: 70px;
+}
+
+}
+
+@media (width >= 1024px) {
+ /* СДЕЛАТЬ ТЕМУ ДЛЯ КОМПА */
+ .header-desktop {
+  display: grid;
+ }
+  .header__rec {
+    position: relative;
+    margin-inline-start: 933px;
+  }
+
+  .header__rec::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .header__theme-menu {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-inline-start: 394px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .header__title {
+    margin-block-start: 275px;
+  }
+
+  .signature {
+    padding-block-start: 114px;
+    margin-inline-start: 504px;
+    padding-inline-end: 10px;
+  }
+
+  .content__concentration-hard {
+    grid-template-columns: 311px 1fr;
+    gap: 20px;
+  }
+
+  .content__text-block {
+    padding-inline-start: 5px;
+    padding-inline-end: 0px;  
+  }
+
+  .section-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .padding-heading_second {
+    margin-inline-end: 115px;
+  }
+  
+  .content__concentration-better-focus {
+    grid-template-columns: 314px 1fr;
+  }
 }

@@ -19,33 +19,36 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="header__rec" aria-hidden="true" data-theme="dark">REC</div>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <header class="header decorated-zone">
+        <div class="header-desktop">
+        <div class="header__rec" aria-hidden="true" data-theme="dark">REC</div>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                День
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled
+              >
+                Авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark"
+              >
+                Неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <h1 class="header__title">no focus</h1>
       <section class="signature">
         <h2 class="title-decor signature-heading">
@@ -90,8 +93,9 @@
             <h2 class="content_heading">Что снижает концентрацию внимания?</h2>
           </div>
         </section>
+        <div class="section-desktop">
         <section class="content_section">
-          <div class="padding_sub-sub-heading">
+          <div class="padding_sub-sub-heading padding_sub-sub-heading_tablet">
             <h3 class="content_sub-sub-heading title-decor">Многозадачность</h3>
           </div>
           <div class="content__text-block">
@@ -101,7 +105,7 @@
           </div>
         </section>
         <section class="content_section">
-          <div class="padding_sub-sub-heading">
+          <div class="padding_sub-sub-heading padding_sub-sub-heading_tablet">
             <h3 class="content_sub-sub-heading title-decor">Еда</h3>
           </div>
           <div class="content__text-block">
@@ -111,7 +115,7 @@
           </div>
         </section>
         <section class="content_section">
-          <div class="padding_sub-sub-heading">
+          <div class="padding_sub-sub-heading padding_sub-sub-heading_tablet">
             <h3 class="content_sub-sub-heading title-decor">Гаджеты</h3>
           </div>
           <div class="content__text-block">
@@ -120,14 +124,15 @@
             </p>
           </div>
         </section>
+        </div>
       </div>
       <div class="content__concentration-better-focus">
-        <section class="content_section content__left-column">
-          <div class="padding-heading_second">
+        <section class="content_section content__left-column_better-focus">
+          <div class="padding-heading_third">
             <h2 class="content_heading">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
           </div>
         </section>
-        <div class="content__right-column">
+        <div class="content__right-column_better-focus">
           <section class="content_section">
             <div class="padding_sub-sub-heading_second">
               <h3 class="content_sub-sub-heading title-decor">5 простых (но самом деле не очень) советов</h3>
@@ -185,18 +190,20 @@
           </section>
         </div>
       </div>
-      <section class="content_section">
-        <div class="padding_gallery">
-          <h3 class="content_sub-sub-heading title-decor">А можно в картинках?</h3>
-        </div>
-        <div class="content__gallery">
-          <img src="./images/sunset.png" alt="Закат" class="content__gallery-image" loading="lazy">
-          <img src="./images/ice-cream.png" alt="Мороженое" class="content__gallery-image" loading="lazy">
-          <img src="./images/tape.png" alt="Кассета" class="content__gallery-image" loading="lazy">
-          <img src="./images/books.png" alt="Книги" class="content__gallery-image" loading="lazy">
-          <img src="./images/street.png" alt="Улица" class="content__gallery-image" loading="lazy">
-        </div>
-      </section>
+      <div class="gallery">
+         <section class="content_section">
+          <div class="padding_gallery">
+            <h3 class="content_sub-sub-heading title-decor">А можно в картинках?</h3>
+          </div>
+          <div class="content__gallery">
+            <img src="./images/sunset.png" alt="Закат" class="content__gallery-image" loading="lazy">
+            <img src="./images/ice-cream.png" alt="Мороженое" class="content__gallery-image" loading="lazy">
+            <img src="./images/tape.png" alt="Кассета" class="content__gallery-image" loading="lazy">
+            <img src="./images/books.png" alt="Книги" class="content__gallery-image" loading="lazy">
+            <img src="./images/street.png" alt="Улица" class="content__gallery-image" loading="lazy">
+          </div>
+          </section>
+        </div> 
     </main>
     <footer class="footer">
       <h2 class="footer__title">focus</h2>
