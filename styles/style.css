@@ -69,7 +69,6 @@
 }
 
 .header__theme-menu {
-  
   margin-block-start: 40px;
   margin-inline-end: 25px;
 }
@@ -114,7 +113,7 @@
 .header__title {
   color: var(--color-title);
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(7.25rem, 5.8125rem + 6.25vw, 9.8125rem);;
+  font-size: clamp(7.25rem, 5.8125rem + 6.25vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--color-accent);
@@ -123,8 +122,8 @@
 
 .signature {
   padding-inline-end: 20px;
- padding-block-start: 56px;
- text-align: left;
+  padding-block-start: 56px;
+  text-align: left;
 }
 
 .signature-heading {
@@ -138,7 +137,6 @@
   padding: 0px;
   display: grid;
   flex-direction: column;
-  
 }
 
 .content__section {
@@ -147,7 +145,7 @@
 }
 
 .content__paragraph a {
-  text-shadow:2px 2px 0 var(--color-accent);
+  text-shadow: 2px 2px 0 var(--color-accent);
   text-decoration: none;
 }
 
@@ -158,6 +156,7 @@
   color: var(--сolor-header-text);
   text-align: left;
 }
+
 .padding-heading {
   padding-inline-end: 20px;
   padding-block-start: 30px;
@@ -175,8 +174,8 @@
 
 .padding_sub-sub-heading {
   padding-inline-end: 20px;
- padding-block-start: 20px;
- padding-block-end: 10px;
+  padding-block-start: 20px;
+  padding-block-end: 10px;
 }
 
 .padding_sub-sub-heading_second {
@@ -207,14 +206,13 @@
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 400;
   font-size: 18px;
- 
 }
 
 .title-decor {
   background-color: var(--color-accent);
 }
 
-.content__text-block { 
+.content__text-block {
   padding-inline-end: 20px;
 }
 
@@ -235,7 +233,7 @@
   display: grid;
   grid-template-columns: minmax(230px, 1fr);
   gap: 10px;
-  padding-inline-end: 20px; 
+  padding-inline-end: 20px;
 }
 
 .content__gallery-image {
@@ -262,7 +260,6 @@
   text-shadow: 2px 2px 0 var(--color-accent);
 }
 
-
 @media (width >= 768px) {
   .header__rec {
     margin-block-start: 10px;
@@ -279,24 +276,23 @@
     left: 10px;
   }
 
-.header__title {
-  margin-block-start: 185px;
-
-}
+  .header__title {
+    margin-block-start: 185px;
+  }
 
   .header__theme-menu {
     padding-block-start: 109px;
     margin-inline-end: 18px;
   }
 
-  .signature{
+  .signature {
     padding-block-start: 154px;
     margin-inline-start: 374px;
     justify-self: end;
     align-self: start;
   }
 
- .content__concentration-hard {
+  .content__concentration-hard {
     display: grid;
     grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
@@ -305,8 +301,8 @@
     padding-block-end: 30px;
   }
 
-  .content__left-column  {
-  grid-column: 1/2;
+  .content__left-column {
+    grid-column: 1/2;
   }
 
   .content__right-column {
@@ -315,11 +311,10 @@
     padding-block-start: 10px;
     padding-inline-start: 10px;
   }
- 
-  .padding-heading {  
+
+  .padding-heading {
     padding-inline-start: 10px;
-    
-  } 
+  }
 
   .padding_sub-sub-heading {
     padding-block-start: 20px;
@@ -346,8 +341,8 @@
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
-  
-  .content__concentration-better-focus { 
+
+  .content__concentration-better-focus {
     display: grid;
     grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
@@ -364,13 +359,11 @@
     padding-inline-end: 0px;
     padding-block-start: 48px;
   }
- 
 
   .content__right-column_better-focus {
     grid-column: 2/2;
     grid-row: 1/2;
     padding-block-start: 30px;
-    
   }
 
   .content__concentration-better-focus .content__text-block {
@@ -398,7 +391,7 @@
   .padding_gallery {
     padding-inline-end: 0px;
   }
-  
+
   .content__gallery {
     grid-template-columns: repeat(3, 1fr);
     padding-inline-end: 0px;
@@ -421,18 +414,17 @@
   .content__gallery-image:nth-child(5) {
     grid-column: 2 / 4;
   }
-  
-.footer {
-  margin-block-start: 70px;
-}
 
+  .footer {
+    margin-block-start: 70px;
+  }
 }
 
 @media (width >= 1024px) {
- /* СДЕЛАТЬ ТЕМУ ДЛЯ КОМПА */
- .header-desktop {
-  display: grid;
- }
+  .header-desktop {
+    display: grid;
+  }
+
   .header__rec {
     position: relative;
     margin-inline-start: 933px;
@@ -477,7 +469,7 @@
 
   .content__text-block {
     padding-inline-start: 5px;
-    padding-inline-end: 0px;  
+    padding-inline-end: 0px;
   }
 
   .section-desktop {
@@ -488,7 +480,7 @@
   .padding-heading_second {
     margin-inline-end: 115px;
   }
-  
+
   .content__concentration-better-focus {
     grid-template-columns: 314px 1fr;
   }
