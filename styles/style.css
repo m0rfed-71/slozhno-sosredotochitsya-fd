@@ -6,25 +6,22 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: #000028;
+  background-color: var(--bg-color); 
   margin-block: 10px;
   margin-inline: 10px;
 }
 
 .header {
-  position: relative;
-  flex-direction: column;
   height: 100vh;
   min-height: 23px;
 }
 
 .header__rec {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: right;
   gap: 10px;
-  margin-inline-start: 294px;
-  margin-inline-end: 29px;
+  margin-inline-end: 20px;
   color: var(--color-accent);
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
@@ -54,8 +51,8 @@
   right: 20px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--color-accent);
-  border-right: 1px solid var(--color-accent);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .decorated-zone::after {
@@ -64,8 +61,8 @@
   bottom: 20px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--color-accent);
-  border-left: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .header__theme-menu {
@@ -86,7 +83,6 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: 0%;
   text-align: center;
   background-color: transparent;
   border: none;
@@ -110,12 +106,15 @@
   pointer-events: none;
 }
 
-.header__title {
+.title {
   color: var(--color-title);
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(7.25rem, 5.8125rem + 6.25vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
+}
+
+.header__decorated {
+  font-size: clamp(7.25rem, 5.8125rem + 6.25vw, 9.8125rem);
   text-shadow: 4px 4px 0 var(--color-accent);
   margin-block-start: 70px;
 }
@@ -251,19 +250,14 @@
   min-block-size: 668px;
 }
 
-.footer__title {
-  color: var(--color-title);
-  font-family: "IBM Plex Mono", sans-serif;
+.footer__decorated {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  line-height: 82.5%;
   text-shadow: 2px 2px 0 var(--color-accent);
 }
 
 @media (width >= 768px) {
   .header__rec {
-    margin-block-start: 10px;
-    margin-inline-start: 677px;
+    margin-block-start: 20px;
   }
 
   .decorated-zone::before {
