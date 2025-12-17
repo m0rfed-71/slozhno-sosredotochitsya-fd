@@ -8,6 +8,7 @@
 @media (prefers-color-scheme: light) {
   .theme-light .header__rec {
     display: none; 
+    
   }
 
   :root.theme-light {
@@ -18,5 +19,40 @@
     --color-text: rgba(53, 52, 48, 1);
     --bg-color: rgba(255, 241, 247, 1);
     --border-color: rgba(53, 52, 48, 1);
+  }
+
+  :root.theme-light .decorated-zone::before {
+    right: 20px;
+    top: -30px;
+  }
+
+  :root.theme-light .decorated-zone::after {
+    bottom: 60px;
+  }
+
+  :root.theme-light .padding-heading {
+    padding-block-start:0px;
+  }
+
+  :root.theme-light .header__theme-menu {
+    padding-block-start: 35px;
+}
+}
+
+
+
+
+@media (width >= 768px) {
+  :root.theme-light .decorated-zone::before {
+    right: 10px;
+    top: -20px;
+  }
+
+  :root.theme-light .header__theme-menu {
+    padding-block-start: 155px;
+  }
+
+  :root.theme-light .padding-heading {
+    padding-block-start: 10px;
   }
 }
