@@ -8,7 +8,6 @@
 @media (prefers-color-scheme: light) {
   .theme-light .header__rec {
     display: none; 
-    
   }
 
   :root.theme-light {
@@ -39,15 +38,11 @@
 }
 }
 
-
-
-
 @media (width >= 768px) {
   :root.theme-light .decorated-zone::before {
     right: 10px;
     top: -20px;
   }
-
 
   :root.theme-light .padding-heading {
     padding-block-start: 10px;
@@ -58,5 +53,4 @@
   :root.theme-light .padding-heading {
     padding-block-start: 30px
   }
-
 }

@@ -3,7 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 :root.theme-dark { 
   --bg-page: url("../images/cover-image-dark.png");
   --сolor-header-text: rgba(255, 0, 112, 1);
