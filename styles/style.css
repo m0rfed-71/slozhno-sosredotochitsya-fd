@@ -103,6 +103,7 @@
 }
 
 .header__theme-menu-button_active {
+  outline: 1px solid var(--сolor-header-text);
   pointer-events: none;
 }
 
@@ -146,6 +147,14 @@
 .content__paragraph a {
   text-shadow: 2px 2px 0 var(--color-accent);
   text-decoration: none;
+}
+
+.content__paragraph a:hover {
+  text-decoration:underline var(--color-text);
+} 
+
+.content__paragraph a:focus {
+  outline: 1px solid var(--color-text);
 }
 
 .content_heading {
@@ -201,11 +210,11 @@
   line-height: 23.4px;
 }
 
-.content_sub-sub-heading_regular {
-  font-family: "IBM Plex Mono", sans-serif;
+.content__concentration-better-focus h4 {
   font-weight: 400;
-  font-size: 18px;
 }
+
+
 
 .title-decor {
   background-color: var(--color-accent);
@@ -274,13 +283,14 @@
   }
 
   .header__theme-menu {
-    padding-block-start: 109px;
+    margin-block-start: 150px;
     margin-inline-end: 18px;
   }
 
   .signature {
     padding-block-start: 154px;
-    margin-inline-start: 374px;
+    min-width: 364px;
+    width: calc(100% - 374px);
     justify-self: end;
     align-self: start;
   }
@@ -321,7 +331,7 @@
   }
 
   .padding-heading_low-attention {
-    padding-inline-end: 512px;
+    max-width: calc(100% - 512px);
     padding-inline-start: 10px;
   }
 
@@ -415,8 +425,15 @@
   }
 
   .header__rec {
-    position: relative;
-    margin-inline-start: 933px;
+    margin-block-start: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 10px;
+  }
+
+  .decorated-zone::after {
+    bottom: 30px;
   }
 
   .header__rec::after {
@@ -428,6 +445,7 @@
     display: flex;
     align-items: center;
     margin: 0;
+    margin-block-start: -25px;
     padding: 0;
     justify-content: center;
   }
@@ -438,19 +456,24 @@
     gap: 25px;
   }
 
-  .header__title {
+  .title {
     margin-block-start: 275px;
   }
 
   .signature {
     padding-block-start: 114px;
-    margin-inline-start: 504px;
+    width: calc(100% - 31.5rem);
     padding-inline-end: 10px;
   }
 
   .content__concentration-hard {
     grid-template-columns: 311px 1fr;
     gap: 20px;
+    padding-block-start: 20px;
+  }
+
+  .padding-heading {
+    padding-block-start: 30px;
   }
 
   .content__text-block {
@@ -464,7 +487,7 @@
   }
 
   .padding-heading_low-attention {
-    margin-inline-end: 115px;
+    margin-inline-end: 700px;
   }
 
   .content__concentration-better-focus {
