@@ -3,13 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-
 @media (prefers-color-scheme: light) {
-  .theme-light .header__rec {
-    display: none; 
-  }
-
   :root.theme-light {
     --bg-page: url("../images/cover-image-light.png");
     --сolor-header-text: rgba(53, 52, 48, 1);
@@ -18,39 +12,31 @@
     --color-text: rgba(53, 52, 48, 1);
     --bg-color: rgba(255, 241, 247, 1);
     --border-color: rgba(53, 52, 48, 1);
-  }
-
-  :root.theme-light .decorated-zone::before {
-    right: 20px;
-    top: -30px;
-  }
-
-  :root.theme-light .decorated-zone::after {
-    bottom: 60px;
-  }
-
-  :root.theme-light .padding-heading {
-    padding-block-start:0px;
-  }
-
-  :root.theme-light .header__theme-menu {
-    padding-block-start: 40px;
+  } 
 }
+
+.theme-light .header__rec {
+  visibility: hidden;
+}
+
+:root.theme-light {
+  --bg-page: url("../images/cover-image-light.png");
+  --сolor-header-text: rgba(53, 52, 48, 1);
+  --color-accent:rgba(255, 141, 203, 1);
+  --color-title: rgba(255, 194, 230, 1);
+  --color-text: rgba(53, 52, 48, 1);
+  --bg-color: rgba(255, 241, 247, 1);
+  --border-color: rgba(53, 52, 48, 1);
 }
 
 @media (width >= 768px) {
   :root.theme-light .decorated-zone::before {
-    right: 10px;
-    top: -20px;
+    right: 20px;
+    top: 20px;
   }
-
-  :root.theme-light .padding-heading {
-    padding-block-start: 10px;
-  }
-}
-
-@media (width >= 1024px) {
-  :root.theme-light .padding-heading {
-    padding-block-start: 30px
+  :root.theme-light .decorated-zone::after {
+    bottom:20px;
+    left: 20px;
   }
 }
+
