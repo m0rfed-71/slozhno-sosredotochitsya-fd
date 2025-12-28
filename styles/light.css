@@ -28,15 +28,3 @@
   --bg-color: rgba(255, 241, 247, 1);
   --border-color: rgba(53, 52, 48, 1);
 }
-
-@media (width >= 768px) {
-  :root.theme-light .decorated-zone::before {
-    right: 20px;
-    top: 20px;
-  }
-  :root.theme-light .decorated-zone::after {
-    bottom:20px;
-    left: 20px;
-  }
-}
-
